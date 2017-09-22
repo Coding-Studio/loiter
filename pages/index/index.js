@@ -2,22 +2,26 @@ const app = getApp();
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {}
+    motto: 'Hello World'
   },
 
   onLoad: function () {
-    const that = this;
-    app.getUserInfo(function (userInfo) {
-      that.setData({
-        userInfo: userInfo
-      });
-    });
+
+  },
+  onShareAppMessage: function() {
+    return {
+      path: '/pages/index/index'
+    }
   },
 
-  bindViewTap: function () {
+  gotoChoose: function (operation) {
     wx.navigateTo({
-      url: '../main/main'
+      url: '../main/main?operation=choose'
+    });
+  },
+  gotoAdd: function (operation) {
+    wx.navigateTo({
+      url: '../main/main?operation=add'
     });
   },
 });

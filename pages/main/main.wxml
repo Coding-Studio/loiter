@@ -1,0 +1,4 @@
+<view class="container">
+  <text class="prefix">{{prefix}}</text>
+  
+</view>
