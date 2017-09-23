@@ -1,5 +1,3 @@
-const app = getApp();
-
 Page({
   data: {
     motto: 'Hello World'
@@ -11,7 +9,7 @@ Page({
   onShareAppMessage: function() {
     return {
       path: '/pages/index/index'
-    }
+    };
   },
 
   gotoChoose: function (operation) {

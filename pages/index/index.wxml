@@ -4,7 +4,7 @@
     <rich-text class="rich-text" bindtap="gotoAdd">自定义一种新食物</rich-text>
   </view>
   <view class="foot">
-    <text class="motto">选择强迫症其实心里早就有了答案\n</text>
+    <text class="motto">选择恐惧症其实心里早就有了答案\n</text>
     <text class="motto">他们只是需要通过 A or B 的选择来告诉他们自己究竟想要什么\n\n</text>
     <text class="nickname">—— Maples7</text>
   </view>

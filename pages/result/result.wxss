@@ -1,0 +1,20 @@
+.add-result {
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.prefix {
+  padding: 30px;
+  font-size: 20px;
+}
+
+.keyword {
+  padding: 130px;
+  font-size: 30px;
+}
+
+.features {
+  padding: 5;
+  font-size: 15px;
+}

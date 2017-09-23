@@ -1,3 +1,57 @@
+.input {
+  padding-top: 10px;
+  text-align: center;
+  color: DimGray;
+}
+
+.placeholder {
+  text-align: center;
+}
+
 .prefix {
   font-size: 20px;
+  align-items: center;
+}
+
+.comment {
+  font-size: 10px;
+  align-items: center;
+  color: #aaa;
+}
+
+.radio-group {
+  padding-top: 40px;
+}
+
+.title {
+  font-weight: 10px;
+  color: gray;
+}
+
+.keyword {
+  font-size: 30px;
+}
+
+.options {
+  flex-direction: row;
+  padding-top: 20px;
+  font-size: 150%;
+}
+
+.left-right-arrow {
+  padding-top: 140px;
+  flex-direction: row;
+  color: gray;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.progress {
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.submit {
+  padding-top: 60px;
 }

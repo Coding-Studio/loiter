@@ -1,4 +1,27 @@
 <view class="container">
-  <text class="prefix">{{prefix}}</text>
+  <view class="input" wx:if="{{operation === 'add'}}">
+    <input maxlength="10" placeholder="给这个食物起一个名字" placeholder-class="placeholder" bindblur="setName" bindconfirm="setName" focus/>
+  </view>
+  <view style="flex-direction: row; padding-top: 20px;">
+    <text class="prefix">{{prefix}} </text>
+    <text class="keyword" style="color: {{questions[index][2]}};">{{questions[index][0]}}</text>
+    <text class="prefix"> 的吗？</text>
+  </view>
+  <text class="comment">例如：{{questions[index][1]}}</text>
+  <view class="options">
+    <radio-group class="radio-group" bindchange="checkedValueChange">
+      <radio value="{{1}}" checked="{{true}}"/>是
+      <text decode="{{true}}" class="title">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <radio value="{{0}}"/>否
+    </radio-group>
+  </view>
   
+  <view class="left-right-arrow">
+    <text class="left-arrow" wx:if="{{index > 0}}" bindtap="preOne">{{"<"}}</text>
+    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text class="progress">{{(index + 1 < 10 ? '0' + (index + 1) : (index + 1))}} / {{questions.length}}</text>
+    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text class="right-arrow" wx:if="{{index < questions.length - 1}}"  bindtap="nextOne">{{">"}}</text>
+  </view>
+  <view class="submit"><button wx:if="{{index === questions.length - 1}}" type="primary" bindtap="submit" disabled="{{operation === 'add' && (!foodName || foodName.length === 0)}}"> 提交 </button></view>
 </view>

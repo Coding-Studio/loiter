@@ -1,0 +1,14 @@
+<view class="container">
+  <view wx:if="{{operation === 'add'}}" style="add-result">
+    <view>
+      <text class="prefix">你新添加的食物是：</text>
+    </view>
+    <view>
+      <text class="keyword">{{foodName}}</text>
+    </view>
+    <view wx:for="{{features}}" wx:key="0" style="features">
+      <text style="color: {{item[1]}};">{{item[0]}}</text>
+    </view>
+  </view>
+  <view wx:else> 3 </view>
+</view>
