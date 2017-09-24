@@ -2,7 +2,7 @@
   <view wx:if="{{myFoods.length > 0}}">
     <checkbox-group bindchange="changeCheckedFoods">
       <view class="list" wx:for="{{myFoods}}" wx:key="key">
-        <checkbox value="{{item}}" checked="{{false}}"/>{{item}}
+        <checkbox color="burlywood" value="{{item}}" checked="{{false}}"/>{{item}}
       </view>
     </checkbox-group>
     <text>\n</text>
