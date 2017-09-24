@@ -10,9 +10,9 @@
   <text class="comment">例如：{{questions[index][1]}}</text>
   <view class="options">
     <radio-group class="radio-group" bindchange="checkedValueChange">
-      <radio value="{{1}}" checked="{{true}}"/>是
+      <radio value="{{1}}" checked="{{selectedValues[index] == 1}}"/>是
       <text decode="{{true}}" class="title">&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <radio value="{{0}}"/>否
+      <radio value="{{0}}" checked="{{selectedValues[index] == 0}}"/>否
     </radio-group>
   </view>
   

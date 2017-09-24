@@ -8,7 +8,7 @@ Page({
     foodName: '',
     operation: 'choose',
     prefix: '你想吃',
-    checkedValue: 1,
+    checkedValue: 0,
     selectedValues: (new Array(questions.length)).fill(0),
     index: 0,
     questions: questions,
@@ -46,9 +46,11 @@ Page({
     } else {
       selectedValues[this.data.index] = 0;
     }
+    const index = this.data.index + offset;
     this.setData({
+      checkedValue: selectedValues[index],
       selectedValues: selectedValues,
-      index: this.data.index += offset
+      index: index
     });
   },
   preOne: function () {
