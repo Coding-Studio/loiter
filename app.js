@@ -6,6 +6,10 @@ App({
   },
 
   onLaunch: function () {
+    this.refreshData();
+  },
+
+  refreshData: function () {
     const userDefiniedFoods = wx.getStorageSync('userDefiniedFoods') || {};
     this.globalData.foods = Object.assign(defaultFoods, userDefiniedFoods);
   }

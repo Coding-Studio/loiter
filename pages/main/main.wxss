@@ -1,5 +1,4 @@
 .input {
-  padding-top: 10px;
   text-align: center;
   color: DimGray;
 }
@@ -20,7 +19,7 @@
 }
 
 .radio-group {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .title {
@@ -34,12 +33,12 @@
 
 .options {
   flex-direction: row;
-  padding-top: 20px;
+  padding-top: 10px;
   font-size: 150%;
 }
 
 .left-right-arrow {
-  padding-top: 140px;
+  padding-top: 80px;
   flex-direction: row;
   color: gray;
   font-size: 25px;
@@ -53,5 +52,5 @@
 }
 
 .submit {
-  padding-top: 60px;
+  padding-top: 50px;
 }

@@ -12,14 +12,19 @@ Page({
     };
   },
 
-  gotoChoose: function (operation) {
+  gotoChoose: function () {
     wx.navigateTo({
       url: '../main/main?operation=choose'
     });
   },
-  gotoAdd: function (operation) {
+  gotoAdd: function () {
     wx.navigateTo({
       url: '../main/main?operation=add'
+    });
+  },
+  viewMyFoods: function () {
+    wx.navigateTo({
+      url: '../list/list'
     });
   },
 });

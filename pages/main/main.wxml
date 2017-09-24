@@ -1,8 +1,8 @@
 <view class="container">
   <view class="input" wx:if="{{operation === 'add'}}">
-    <input maxlength="10" placeholder="给这个食物起一个名字" placeholder-class="placeholder" bindblur="setName" bindconfirm="setName" focus/>
+    <input maxlength="20" placeholder="给这个食物起一个名字" placeholder-class="placeholder" bindblur="setName" bindconfirm="setName" focus/>
   </view>
-  <view style="flex-direction: row; padding-top: 20px;">
+  <view style="flex-direction: row;">
     <text class="prefix">{{prefix}} </text>
     <text class="keyword" style="color: {{questions[index][2]}};">{{questions[index][0]}}</text>
     <text class="prefix"> 的吗？</text>

@@ -5,16 +5,25 @@
 }
 
 .prefix {
-  padding: 30px;
   font-size: 20px;
 }
 
 .keyword {
-  padding: 130px;
   font-size: 30px;
 }
 
 .features {
-  padding: 5;
+  flex-direction: column;
+  position: relative;
   font-size: 15px;
+}
+
+.recomends {
+  font-size: 30px;
+  padding: 5px; 
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

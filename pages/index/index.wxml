@@ -2,6 +2,7 @@
   <view class="main">
     <button type="primary" bindtap="gotoChoose">开始问答</button>
     <rich-text class="rich-text" bindtap="gotoAdd">自定义一种新食物</rich-text>
+    <rich-text class="rich-text" bindtap="viewMyFoods">查看我的自定义食物</rich-text>
   </view>
   <view class="foot">
     <text class="motto">选择恐惧症其实心里早就有了答案\n</text>
