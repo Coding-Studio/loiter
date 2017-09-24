@@ -20,6 +20,7 @@
 
 .radio-group {
   padding-top: 30px;
+  border: 20px solid transparent;
 }
 
 .title {
@@ -43,6 +44,7 @@
   color: gray;
   font-size: 25px;
   font-weight: bolder;
+  border: 20px solid transparent;
 }
 
 .progress {

@@ -28,11 +28,6 @@ Page({
       path: '/pages/index/index'
     };
   },
-  checkedValueChange: function (e) {
-    this.setData({
-      checkedValue: e.detail.value
-    });
-  },
 
   setName: function (e) {
     this.setData({
@@ -62,6 +57,18 @@ Page({
     if (this.data.index < this.data.questions.length - 1) {
       this.main(1);
     }
+  },
+  clickYes: function () {
+    this.setData({
+      checkedValue: 1
+    });
+    this.nextOne();
+  },
+  clickNo: function () {
+    this.setData({
+      checkedValue: 0
+    });
+    this.nextOne();
   },
   submit: function () {
     this.main(0);

@@ -9,19 +9,19 @@
   </view>
   <text class="comment">例如：{{questions[index][1]}}</text>
   <view class="options">
-    <radio-group class="radio-group" bindchange="checkedValueChange">
-      <radio value="{{1}}" checked="{{selectedValues[index] == 1}}"/>是
+    <radio-group class="radio-group">
+      <radio bindtap="clickYes" value="{{1}}" checked="{{selectedValues[index] == 1}}"/>是
       <text decode="{{true}}" class="title">&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <radio value="{{0}}" checked="{{selectedValues[index] == 0}}"/>否
+      <radio bindtap="clickNo" value="{{0}}" checked="{{selectedValues[index] == 0}}"/>否
     </radio-group>
   </view>
   
   <view class="left-right-arrow">
-    <text class="left-arrow" wx:if="{{index > 0}}" bindtap="preOne">{{"<"}}</text>
+    <text wx:if="{{index > 0}}" bindtap="preOne">{{"<"}}</text>
     <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
     <text class="progress">{{(index + 1 < 10 ? '0' + (index + 1) : (index + 1))}} / {{questions.length}}</text>
     <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-    <text class="right-arrow" wx:if="{{index < questions.length - 1}}"  bindtap="nextOne">{{">"}}</text>
+    <text wx:if="{{index < questions.length - 1}}"  bindtap="nextOne">{{">"}}</text>
   </view>
   <view class="submit"><button wx:if="{{index === questions.length - 1}}" type="primary" bindtap="submit" disabled="{{operation === 'add' && (!foodName || foodName.length === 0)}}"> 提交 </button></view>
 </view>
