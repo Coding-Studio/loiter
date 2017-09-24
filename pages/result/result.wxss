@@ -1,0 +1,29 @@
+.add-result {
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.prefix {
+  font-size: 20px;
+}
+
+.keyword {
+  font-size: 30px;
+}
+
+.features {
+  flex-direction: column;
+  position: relative;
+  font-size: 15px;
+}
+
+.recomends {
+  font-size: 30px;
+  padding: 5px; 
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

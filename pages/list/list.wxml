@@ -1,0 +1,15 @@
+<view class="container">
+  <view wx:if="{{myFoods.length > 0}}">
+    <checkbox-group bindchange="changeCheckedFoods">
+      <view class="list" wx:for="{{myFoods}}" wx:key="key">
+        <checkbox color="burlywood" value="{{item}}" checked="{{false}}"/>{{item}}
+      </view>
+    </checkbox-group>
+    <text>\n</text>
+    <rich-text class="rich-text" bindtap="deleteChecked">删除所选食物</rich-text>
+  </view>
+  <view wx:else>
+    <text class="error">Oops!\n\n 你还没有自己的自定义食物，来添加一些吧！\n\n</text>
+    <rich-text class="rich-text" bindtap="gotoAdd">自定义一种新食物</rich-text>
+  </view>
+</view>

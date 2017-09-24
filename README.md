@@ -1,2 +1,2 @@
 # loiter
-A wechat mini program about travelling log
+A wechat mini program who helps you know what you want to eat later.

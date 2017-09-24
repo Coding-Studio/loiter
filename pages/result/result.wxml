@@ -1,0 +1,31 @@
+<view class="container">
+  <view wx:if="{{operation === 'add'}}" class="add-result">
+    <view>
+      <text class="prefix">你新添加的食物是：</text>
+    </view>
+    <text>\n</text>
+    <view>
+      <text class="keyword">{{foodName}}</text>
+    </view>
+    <text>\n</text>
+    <view wx:for="{{features}}" wx:key="0" class="features">
+      <text style="color: {{item[1]}};">{{item[0]}}</text>
+    </view>
+    <rich-text class="rich-text" bindtap="gotoIndex">回到首页</rich-text>
+  </view>
+  <view wx:else>
+    <view wx:if="{{recomends && recomends.length > 0}}">
+      <text class="prefix">你现在想吃的食物可能有：</text>
+      <text>\n\n</text>
+      <view wx:for="{{recomends}}" wx:key="key" class="recomends">
+        <text>{{item}}</text>
+      </view>
+      <text>\n\n</text>
+      <rich-text class="rich-text" bindtap="gotoIndex">回到首页</rich-text>
+    </view>
+    <view wx:else>
+      <text class="error">Oops!\n\n 还没有可以推荐给你的食物，自己来添加一些吧！\n\n</text>
+      <rich-text class="rich-text" bindtap="gotoAdd">自定义一种新食物</rich-text>
+    </view>
+  </view>
+</view>
